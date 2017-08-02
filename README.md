@@ -33,11 +33,11 @@
 
 <h2>Test API Mocked Urls</h2>
 <p>
-    https://portal.letssafe.com/testapi/v2/applicants/3fdc5a6f-09b8-459e-9b1d-129e761a485c
-    https://portal.letssafe.com/testapi/v2/credits
-    https://portal.letssafe.com/testapi/v2/references
-    https://portal.letssafe.com/testapi/v2/applicants/completed
-    https://portal.letssafe.com/testapi/v2/applicants/inprogress
+    https://portal.letssafe.com/testapi/v2/applicants/3fdc5a6f-09b8-459e-9b1d-129e761a485c<br />
+    https://portal.letssafe.com/testapi/v2/credits<br />
+    https://portal.letssafe.com/testapi/v2/references<br />
+    https://portal.letssafe.com/testapi/v2/applicants/completed<br />
+    https://portal.letssafe.com/testapi/v2/applicants/inprogress<br />
 </p>
 
 <h2>Product Types</h2>
