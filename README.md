@@ -31,3 +31,48 @@
     </li>
 </ul>
 
+<h2>Test API Mocked Urls</h2>
+<p>
+    https://portal.letssafe.com/testapi/v2/applicants/3fdc5a6f-09b8-459e-9b1d-129e761a485c
+    https://portal.letssafe.com/testapi/v2/credits
+    https://portal.letssafe.com/testapi/v2/references
+    https://portal.letssafe.com/testapi/v2/applicants/completed
+    https://portal.letssafe.com/testapi/v2/applicants/inprogress
+</p>
+
+<h2>Product Types</h2>
+<ul>
+    <li>Full Tenant Reference = 1</li>
+    <li>Guarantor Reference = 3</li>
+    <li>Credit Check = 4</li>        
+</ul>
+
+<h2>Grades Types</h2>
+<ul>
+    <li>Pass = 1</li>
+    <li>Failed = 2</li>
+    <li>Inconclusive = 3</li>
+    <li>Not Applicable = 4</li>
+    <li>In Progress = 5</li>
+    <li>Warning = 6</li>
+</ul>
+
+<h2>Employment Types</h2>
+<ul>
+    <li>Employed = 1</li>
+    <li>Employed Part Time = 2</li>
+    <li>Self Employed = 3</li>
+    <li>Unemployed = 4</li>
+    <li>Contract = 5</li>
+    <li>Retired = 6</li>
+    <li>Student = 7</li>
+</ul>
+
+<h2>Residential Type</h2>
+<ul>
+    <li>Property Owner = 1</li>
+    <li>Council Tenant = 2</li>
+    <li>Private Tenant = 3</li>
+    <li>Living With Friends Or Relatives = 4</li>
+</ul>
+
