@@ -31,6 +31,31 @@
     </li>
 </ul>
 
+<h2>Example payload for creating a tenant reference<h2>
+<p>
+```json
+{
+  "TenancyTerm": 2,
+  "TenancyAddressPostcode": "SW11 1XZ",
+  "TenancyStartDate": "11/11/2017",
+  "TenancyAddressLine1": "1",
+  "TenancyAddressTown": "Test Town",
+  "TenancyAddressCounty": "Test County",
+  "TenancyMonthlyRent": "400",
+  "Applicants": [
+    {
+      "ApplicantFirstName": "CC JULIA",
+      "ApplicantLastName": "AUDI",
+      "ApplicantEmailAddress": "api@letssafe.com",
+      "ApplicantPhoneNumber": "123",
+      "TenantShareOfRent": 400,
+      "Product": 4
+    }
+  ]
+}
+```
+</p>
+
 <h2>Test API Mocked Urls</h2>
 <p>
     https://portal.letssafe.com/testapi/v2/applicants/3fdc5a6f-09b8-459e-9b1d-129e761a485c
@@ -47,7 +72,7 @@
     <li>Credit Check = 4</li>        
 </ul>
 
-<h2>Grades Types</h2>
+<h2>Grade Types</h2>
 <ul>
     <li>Pass = 1</li>
     <li>Failed = 2</li>
