@@ -33,7 +33,7 @@
 
 <h2>Example payload for creating a tenant reference<h2>
 <p>
-```json
+```javascript
 {
   "TenancyTerm": 2,
   "TenancyAddressPostcode": "SW11 1XZ",
