@@ -1,6 +1,8 @@
 <h1>Lets Safe API</h1>
 
-<p>All calls can be made using PHP, see our examples below</p>
+<p>All calls can be made using PHP, see our examples below.</p>
+
+<p>To use the test API replace api/v2 with testapi/v2, the test API will return mocked data.<p>
 
 <ul>
     <li>
