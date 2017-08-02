@@ -76,3 +76,21 @@
     <li>Living With Friends Or Relatives = 4</li>
 </ul>
 
+<h2>Title Types</h2>
+<ul>
+    <li>Mr = 1</li>
+    <li>Mrs = 2</li>
+    <li>Miss = 3</li>
+    <li>Ms = 4</li>
+    <li>Dr = 5</li>
+    <li>Rev = 6</li>
+    <li>Lord = 7</li>
+    <li>Lady = 8</li>
+    <li>Sir = 9</li>
+    <li>Professor = 10</li>
+    <li>Captian = 11</li>
+    <li>Colonel = 12</li>
+    <li>Hon = 13</li>
+    <li>Major = 14</li>        
+</ul>
+
