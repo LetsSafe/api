@@ -3,7 +3,7 @@ var request = require("request");
 var useTestApi = true;
 var apiKey = 'api key here'
 
-function apiUrl() {
+function _apiUrl() {
     if (useTestApi) {
         return 'https://portal.letssafe.com/testapi/v2';
     }
@@ -15,7 +15,7 @@ function apiUrl() {
 function submit(tenancyDetails) {
     let options = {
         method: 'POST',
-        url: apiUrl() + '/references',
+        url: _apiUrl() + '/references',
         headers:
         {
             'cache-control': 'no-cache',
@@ -42,7 +42,7 @@ function completedReferences(odata = "") {
 
     const options = {
         method: 'GET',
-        url: apiUrl() + '/applicants/completed?' + odata,
+        url: _apiUrl() + '/applicants/completed?' + odata,
         headers:
         {
             'cache-control': 'no-cache',
@@ -70,7 +70,7 @@ completedReferences('$top=5&$skip=0').then((res) => {
 });
 */
 
-/* 
+/*
 // Sample payload for submitting a reference 
 const tenancyDetails = {
     TenancyTerm: 2,
@@ -94,4 +94,7 @@ const tenancyDetails = {
 submit(tenancyDetails).then((res) => {
     console.log(res)
 })
- */
+*/
+ 
+
+module.exports = { submit, completedReferences, apiKey, useTestApi };
