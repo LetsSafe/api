@@ -1,0 +1,14 @@
+{
+  "name": "lets-safe-api",
+  "version": "1.0.3",
+  "description": "",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.81.0"
+  }
+}
