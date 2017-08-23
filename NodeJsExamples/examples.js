@@ -1,6 +1,6 @@
 var letsSafeApi = require("lets-safe-api")
 
-letsSafeApi.init('zX6LSRQ590lzzni9P5kMFc709q9JP5LuSwwSFkYfj1AngeacMqHs6oxveWWuTLwB', true)
+letsSafeApi.init('api key here', true)
 
 const tenancyDetails = {
     TenancyTerm: 2,
