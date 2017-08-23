@@ -1,6 +1,6 @@
 {
   "name": "lets-safe-api",
-  "version": "1.0.4",
+  "version": "1.0.10",
   "description": "",
   "main": "api.js",
   "scripts": {

@@ -1,15 +1,20 @@
 var request = require("request");
 
-var useTestApi = true;
-var apiKey = 'api key here'
+var _useTestApi = true;
+var _apiKey = 'api key here'
 
 function _apiUrl() {
-    if (useTestApi) {
+    if (_useTestApi) {
         return 'https://portal.letssafe.com/testapi/v2';
     }
     else {
         return 'https://portal.letssafe.com/api/v2'
     }
+}
+
+function init(apiKey, useTestApi) {
+    _apiKey = apiKey;
+    _useTestApi = useTestApi;
 }
 
 function submit(tenancyDetails) {
@@ -19,7 +24,7 @@ function submit(tenancyDetails) {
         headers:
         {
             'cache-control': 'no-cache',
-            apikey: apiKey,
+            apikey: _apiKey,
             'content-type': 'application/json'
         },
         body: JSON.stringify(tenancyDetails)
@@ -31,7 +36,7 @@ function submit(tenancyDetails) {
                 throw new Error(error);
                 reject(error);
             }
-            resolve(JSON.parse(body));
+            resolve(body);
         });
     });
 
@@ -46,7 +51,7 @@ function completedReferences(odata = "") {
         headers:
         {
             'cache-control': 'no-cache',
-            apikey: apiKey
+            apikey: _apiKey
         }
     };
 
@@ -63,38 +68,4 @@ function completedReferences(odata = "") {
     return promise;
 }
 
-/* 
-//Get a list of completed ref, odata can be used to filter the data 
-completedReferences('$top=5&$skip=0').then((res) => {
-    console.log(res.length)
-});
-*/
-
-/*
-// Sample payload for submitting a reference 
-const tenancyDetails = {
-    TenancyTerm: 2,
-    TenancyAddressPostcode: 'SW11 1XZ',
-    TenancyStartDate: '11/11/2017',
-    TenancyAddressLine1: '1',
-    TenancyAddressTown: 'Test Town',
-    TenancyAddressCounty: 'Test County',
-    TenancyMonthlyRent: '400',
-    Applicants:
-    [{
-        ApplicantFirstName: 'CC JULIA',
-        ApplicantLastName: 'AUDI',
-        ApplicantEmailAddress: 'api@letssafe.com',
-        ApplicantPhoneNumber: '123',
-        TenantShareOfRent: 400,
-        Product: 4
-    }]
-}
-
-submit(tenancyDetails).then((res) => {
-    console.log(res)
-})
-*/
- 
-
-module.exports = { submit, completedReferences, apiKey, useTestApi };
+module.exports = { submit, completedReferences, init };
