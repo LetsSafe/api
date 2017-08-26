@@ -12,6 +12,34 @@ function _apiUrl() {
     }
 }
 
+function _headers(){
+    return {
+        'cache-control': 'no-cache',
+        apikey: _apiKey,
+        'content-type': 'application/json'
+    }
+}
+
+function _references(odata, endpoint){
+    const options = {
+        method: 'GET',
+        url: _apiUrl() + '/applicants/'+ endpoint +'?' + odata,
+        headers: _headers()
+    };
+
+    const promise = new Promise((resolve, reject) => {
+        request(options, function (error, response, body) {
+            if (error) {
+                throw new Error(error);
+                reject(error);
+            }
+            resolve(JSON.parse(body));
+        });
+    });
+
+    return promise;
+}
+
 function init(apiKey, useTestApi) {
     _apiKey = apiKey;
     _useTestApi = useTestApi;
@@ -21,12 +49,7 @@ function submit(tenancyDetails) {
     let options = {
         method: 'POST',
         url: _apiUrl() + '/references',
-        headers:
-        {
-            'cache-control': 'no-cache',
-            apikey: _apiKey,
-            'content-type': 'application/json'
-        },
+        headers: _headers(),
         body: JSON.stringify(tenancyDetails)
     };
 
@@ -44,15 +67,18 @@ function submit(tenancyDetails) {
 }
 
 function completedReferences(odata = "") {
+    return _references(odata, 'completed');
+}
 
+function inprogressReferences(odata = "") {
+    return _references(odata, 'inprogress');
+}
+
+function applicant(id){
     const options = {
         method: 'GET',
-        url: _apiUrl() + '/applicants/completed?' + odata,
-        headers:
-        {
-            'cache-control': 'no-cache',
-            apikey: _apiKey
-        }
+        url: _apiUrl() + '/applicants/'+ id,
+        headers: _headers()
     };
 
     const promise = new Promise((resolve, reject) => {
@@ -68,4 +94,24 @@ function completedReferences(odata = "") {
     return promise;
 }
 
-module.exports = { submit, completedReferences, init };
+function credits() {
+    const options = {
+        method: 'GET',
+        url: _apiUrl() + '/credits',
+        headers: _headers()
+    };
+
+    const promise = new Promise((resolve, reject) => {
+        request(options, function (error, response, body) {
+            if (error) {
+                throw new Error(error);
+                reject(error);
+            }
+            resolve(JSON.parse(body));
+        });
+    });
+
+    return promise;
+}
+
+module.exports = { submit, completedReferences, inprogressReferences, init, credits, applicant };
