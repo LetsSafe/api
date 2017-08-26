@@ -4,8 +4,6 @@
 
 <p>To use the test API replace api/v2 with testapi/v2, the test API will return mocked data.<p>
 
-<p>npm install lets-safe-api --save<p>
-
 <ul>
     <li>
         <a href="https://github.com/LetsSafe/api/blob/master/post_reference.php">Create a new tenant reference</a>
