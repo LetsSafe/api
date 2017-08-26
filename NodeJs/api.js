@@ -23,7 +23,7 @@ function _headers(){
 function _references(odata, endpoint){
     const options = {
         method: 'GET',
-        url: _apiUrl() + '/applicants/'+ endpoint +'?' + odata,
+        url: _apiUrl() + '/applicants'+ endpoint +'?' + odata,
         headers: _headers()
     };
 
@@ -67,11 +67,15 @@ function submit(tenancyDetails) {
 }
 
 function completedReferences(odata = "") {
-    return _references(odata, 'completed');
+    return _references(odata, '/completed');
 }
 
 function inprogressReferences(odata = "") {
-    return _references(odata, 'inprogress');
+    return _references(odata, '/inprogress');
+}
+
+function references(odata = "") {    
+    return _references(odata, '');
 }
 
 function applicant(id){
@@ -134,4 +138,4 @@ function pdfReport(id){
     return promise;
 }
 
-module.exports = { submit, completedReferences, inprogressReferences, init, credits, applicant, pdfReport };
+module.exports = { init, submit, references, completedReferences, inprogressReferences, credits, applicant, pdfReport };
