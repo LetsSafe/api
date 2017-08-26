@@ -66,6 +66,27 @@ function submit(tenancyDetails) {
     return promise;
 }
 
+function addAGuarantor(applicantId, guarantorDetails) {
+    let options = {
+        method: 'POST',
+        url: _apiUrl() + '/applicants/' + applicantId + '/gtors/add',
+        headers: _headers(),
+        body: JSON.stringify(guarantorDetails)
+    };
+
+    const promise = new Promise((resolve, reject) => {
+        request(options, function (error, response, body) {
+            if (error) {
+                throw new Error(error);
+                reject(error);
+            }
+            resolve(body);
+        });
+    });
+
+    return promise;
+}
+
 function completedReferences(odata = "") {
     return _references(odata, '/completed');
 }
@@ -98,10 +119,10 @@ function count() {
     return promise;
 }
 
-function applicant(id){
+function applicant(applicantId){
     const options = {
         method: 'GET',
-        url: _apiUrl() + '/applicants/'+ id,
+        url: _apiUrl() + '/applicants/'+ applicantId,
         headers: _headers()
     };
 
@@ -138,10 +159,10 @@ function credits() {
     return promise;
 }
 
-function pdfReport(id){
+function pdfReport(applicantId){
     const options = {
         method: 'GET',
-        url: _apiUrl() + '/applicants/'+ id + '/pdf',
+        url: _apiUrl() + '/applicants/'+ applicantId + '/pdf',
         headers: _headers()
     };
 
@@ -158,4 +179,4 @@ function pdfReport(id){
     return promise;
 }
 
-module.exports = { init, submit, references, completedReferences, inprogressReferences, count, credits, applicant, pdfReport };
+module.exports = { init, submit, addAGuarantor, references, completedReferences, inprogressReferences, count, credits, applicant, pdfReport };
