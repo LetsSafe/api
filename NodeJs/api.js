@@ -114,4 +114,24 @@ function credits() {
     return promise;
 }
 
-module.exports = { submit, completedReferences, inprogressReferences, init, credits, applicant };
+function pdfReport(id){
+    const options = {
+        method: 'GET',
+        url: _apiUrl() + '/applicants/'+ id + '/pdf',
+        headers: _headers()
+    };
+
+    const promise = new Promise((resolve, reject) => {
+        request(options, function (error, response, body) {
+            if (error) {
+                throw new Error(error);
+                reject(error);
+            }
+            resolve(JSON.parse(body));
+        });
+    });
+
+    return promise;
+}
+
+module.exports = { submit, completedReferences, inprogressReferences, init, credits, applicant, pdfReport };
