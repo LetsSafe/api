@@ -139,6 +139,26 @@ function applicant(applicantId){
     return promise;
 }
 
+function deleteApplicant(applicantId){
+    const options = {
+        method: 'DELETE',
+        url: _apiUrl() + '/applicants/'+ applicantId,
+        headers: _headers()
+    };
+
+    const promise = new Promise((resolve, reject) => {
+        request(options, function (error, response, body) {
+            if (error) {
+                throw new Error(error);
+                reject(error);
+            }
+            resolve(JSON.parse(body));
+        });
+    });
+
+    return promise;
+}
+
 function credits() {
     const options = {
         method: 'GET',
@@ -179,4 +199,4 @@ function pdfReport(applicantId){
     return promise;
 }
 
-module.exports = { init, submit, addAGuarantor, references, completedReferences, inprogressReferences, count, credits, applicant, pdfReport };
+module.exports = { init, submit, addAGuarantor, deleteApplicant, references, completedReferences, inprogressReferences, count, credits, applicant, pdfReport };
