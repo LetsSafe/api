@@ -6,7 +6,7 @@ letsSafeApi.init('zX6LSRQ590lzzni9P5kMFc709q9JP5LuSwwSFkYfj1AngeacMqHs6oxveWWuTL
 
 1 credit = A credit check | A guarantor reference check
 2 credits = A tenant reference check */
-letsSafeApi.submit(tenancyDetails).then((res) =>{
+letsSafeApi.credits().then((res) =>{
     console.log("Number for credits" + res)
 });
 
