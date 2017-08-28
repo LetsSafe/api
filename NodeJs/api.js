@@ -192,7 +192,7 @@ function pdfReport(applicantId){
                 throw new Error(error);
                 reject(error);
             }
-            resolve(JSON.parse(body));
+            resolve(body);
         });
     });
 
