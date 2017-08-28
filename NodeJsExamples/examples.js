@@ -1,14 +1,20 @@
 var letsSafeApi = require("lets-safe-api")
 
-letsSafeApi.init('zX6LSRQ590lzzni9P5kMFc709q9JP5LuSwwSFkYfj1AngeacMqHs6oxveWWuTLwB', true)
+letsSafeApi.init('api key here', false)
 
 /* Get the number of credits available 
 
 1 credit = A credit check | A guarantor reference check
 2 credits = A tenant reference check */
 letsSafeApi.credits().then((res) =>{
-    console.log("Number for credits" + res)
+    console.log("Number for credits: ")
+    console.log(res)
 });
+
+letsSafeApi.count().then((countRes) =>{
+    console.log("Count: ")
+    console.log(countRes)
+})
 
 /* Submit a new tenant reference check
 
@@ -23,7 +29,7 @@ const tenancyDetails = {
     TenancyMonthlyRent: '400',
     Applicants:
     [{
-        ApplicantFirstName: 'CC JULIA',
+        ApplicantFirstName: 'JULIA',
         ApplicantLastName: 'AUDI',
         ApplicantEmailAddress: 'api@letssafe.com',
         ApplicantPhoneNumber: '123',
@@ -32,6 +38,25 @@ const tenancyDetails = {
     }]
 }
 
+/* Step 1: Submit a new reference application
+   Step 2: Get the applicants by reference id
+   Step 3: Get the applicant by applicant id
+   Step 4: Clean up the test, delete the applicant 
+*/ 
 letsSafeApi.submit(tenancyDetails).then((res) =>{
-    console.log("Tenant reference id (Guid): " + res)
+    console.log("Submit Response")
+    console.log(res.body)
+    letsSafeApi.references("$filter=ReferenceId eq " + res.body.id + "").then((res) =>{
+        console.log("Get Applicants by Ref Id Response:")
+        res.body.forEach(function(element) {            
+            letsSafeApi.applicant(element.ApplicantId).then((applicantRes) =>{
+                console.log("Get Applicant Response:")
+                console.log(applicantRes.body.ApplicantFirstName + " " + applicantRes.body.ApplicantLastName)
+                letsSafeApi.deleteApplicant(applicantRes.body.ApplicantId).then((deleteApplicantRes) =>{
+                    console.log("Delete Applicant Response:")
+                    console.log(deleteApplicantRes)
+                })
+            });
+        });
+    });
 });
