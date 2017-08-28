@@ -1,14 +1,15 @@
 var request = require("request");
 
 var _useTestApi = true;
-var _apiKey = 'api key here'
+var _apiKey = ''
+var _hostname = ''
 
 function _apiUrl() {
     if (_useTestApi) {
-        return 'https://portal.letssafe.com/testapi/v2';
+        return _hostname + '/testapi/v2';
     }
     else {
-        return 'https://portal.letssafe.com/api/v2'
+        return _hostname + '/api/v2'
     }
 }
 
@@ -40,9 +41,10 @@ function _references(odata, endpoint){
     return promise;
 }
 
-function init(apiKey, useTestApi) {
+function init(apiKey, useTestApi, hostname = 'https://portal.letssafe.com/') {
     _apiKey = apiKey;
     _useTestApi = useTestApi;
+    _hostname = hostname;
 }
 
 function submit(tenancyDetails) {
