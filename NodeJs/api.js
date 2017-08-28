@@ -34,7 +34,7 @@ function _references(odata, endpoint){
                 throw new Error(error);
                 reject(error);
             }
-            resolve(JSON.parse(body));
+            resolve({ statusCode: response.statusCode, body: JSON.parse(body) });
         });
     });
 
@@ -61,7 +61,7 @@ function submit(tenancyDetails) {
                 throw new Error(error);
                 reject(error);
             }
-            resolve(body);
+            resolve({ statusCode: response.statusCode, body: body ? JSON.parse(body) : '' });
         });
     });
 
@@ -82,7 +82,7 @@ function addAGuarantor(applicantId, guarantorDetails) {
                 throw new Error(error);
                 reject(error);
             }
-            resolve(body);
+            resolve({ statusCode: response.statusCode, body: body ? JSON.parse(body) : '' });
         });
     });
 
@@ -114,7 +114,7 @@ function count() {
                 throw new Error(error);
                 reject(error);
             }
-            resolve(JSON.parse(body));
+            resolve({ statusCode: response.statusCode, body: body ? JSON.parse(body) : '' });
         });
     });
 
@@ -134,7 +134,7 @@ function applicant(applicantId){
                 throw new Error(error);
                 reject(error);
             }
-            resolve(JSON.parse(body));
+            resolve({ statusCode: response.statusCode, body: body ? JSON.parse(body) : '' });
         });
     });
 
@@ -154,7 +154,7 @@ function deleteApplicant(applicantId){
                 throw new Error(error);
                 reject(error);
             }
-            resolve(JSON.parse(body));
+            resolve({ statusCode: response.statusCode, body: body ? JSON.parse(body) : '' });
         });
     });
 
@@ -174,7 +174,7 @@ function credits() {
                 throw new Error(error);
                 reject(error);
             }
-            resolve(JSON.parse(body));
+            resolve({ statusCode: response.statusCode, body: body ? JSON.parse(body) : '' });
         });
     });
 
@@ -194,7 +194,7 @@ function pdfReport(applicantId){
                 throw new Error(error);
                 reject(error);
             }
-            resolve(body);
+            resolve({ statusCode: response.statusCode, body: body ? body : '' });
         });
     });
 

@@ -1,6 +1,6 @@
 {
   "name": "lets-safe-api",
-  "version": "1.1.0", 
+  "version": "1.1.2", 
   "description": "NodeJs tenant referencing and credit check API",
   "main": "api.js",
   "scripts": {
