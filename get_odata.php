@@ -1,7 +1,7 @@
 <?php
 
 $apiKey = "";
-$odata = "%24filter=ApplicantFirstName%20eq%20'Test'";
+$odata = "$filter=ApplicantFirstName eq 'Test'";
 
 $curl = curl_init();
 
