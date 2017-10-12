@@ -15,7 +15,7 @@
         <a href="https://github.com/LetsSafe/api/blob/master/get_applicant.php">Get an applicant</a>
     </li>
      <li>
-        <a href="https://github.com/LetsSafe/api/blob/master/get_report.php">Get a PDF report</a>
+        <a href="https://github.com/LetsSafe/api/blob/master/get_report.php">Get a PDF report (Does not work on the test api, only live data)</a>
     </li>
     <li>
         <a href="https://github.com/LetsSafe/api/blob/master/get_odata.php">Query using OData</a>
