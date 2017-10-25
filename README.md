@@ -38,7 +38,6 @@
     https://portal.letssafe.com/testapi/v2/references<br />
     https://portal.letssafe.com/testapi/v2/applicants/completed<br />
     https://portal.letssafe.com/testapi/v2/applicants/inprogress<br />
-    https://portal.letssafe.com/testapi/v2/references<br />
 </p>
 
 <h2>OData filtering examples</h2>
