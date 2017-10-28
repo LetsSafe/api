@@ -58,10 +58,18 @@
 </p>
 
 <h2>Webhook Events</h2>
-<ul>
-    <li>{ "ReferenceId":"9d967a61-6fc5-4bac-8106-79270b5441cf", "AgentId":1, "EventType":"reference/created" }</li>
-    <li>{ "ApplicantId":"a467cb55-5d53-4d23-b133-8ef774404858", "AgentId":1, "EventType":"applicant/created" }</li>
-    <li>{ "ApplicantId":"1178b0c7-d718-4719-91d7-b16192e72670", "AgentId":1, "EventType":"applicant/gtor/created" }</li>
+<ul>  
+    <li>Reference Creation</li>
+    <li>{ "Payload":"reference id GUID", "AgentId":1, "EventType":"reference/created" }</li>
+    <li>{ "Payload":"applicant id GUID", "AgentId":1, "EventType":"applicant/created" }</li>
+    <li>{ "Payload":"applicant id GUID", "AgentId":1, "EventType":"applicant/gtor/created" }</li>
+    <li>References</li>
+    <li>{ "Payload":"applicant id GUID", "AgentId":1, "EventType":"reference/currentemployer/completed"}</li>
+    <li>{ "Payload":"applicant id GUID", "AgentId":1, "EventType":"reference/futureemployer/completed"}</li>
+    <li>{ "Payload":"applicant id GUID", "AgentId":1, "EventType":"reference/currentLandlord/completed"}</li>
+    <li>{ "Payload":"applicant id GUID", "AgentId":1, "EventType":"reference/previouslandlord/completed"}</li>
+    <li>Payments</li>
+    <li>{ "Payload":"", "AgentId":1, "EventType":"payment/created" }</li>
 </ul>
 
 <h2>Product Types</h2>
