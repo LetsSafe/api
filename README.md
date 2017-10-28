@@ -59,7 +59,6 @@
 
 <h2>Webhook Events</h2>
 <ul>  
-    <li>Referencing Events</li>
     <li>applicant/created, when a new reference is created</li>
     <li>applicant/gtor/created, when a guarantor is added to a reference</li>
     <li>applicant/deleted, when an applicant is delete from a reference</li>
@@ -72,8 +71,8 @@
     <li>Payments</li>
     <li>payment/created, when a payment is made on your account</li>
 </ul>
+<h2>Webhook Events Payloads</h2>
 <ul>  
-    <li>Referencing Event Payload</li>
     <li>{ "Payload":"applicant id GUID", "AgentId":1, "EventType":"applicant/created" }</li>
     <li>{ "Payload":"applicant id GUID", "AgentId":1, "EventType":"applicant/gtor/created" }</li>
     <li>{ "Payload":"applicant id GUID", "AgentId":1, "EventType":"applicant/deleted"}</li>
