@@ -49,6 +49,21 @@
     <li>/testapi/v2/references?$filter=ReferenceId eq 9937dec9-ff6c-47c8-a55b-3f1c21633f85</li>
 </ul>
 
+<h2>How to setup Webhooks</h2>
+<p>
+    To enable webhooks:
+    1: Login to the Portal
+    2: Go to Settings
+    3: Add a webhook url   
+</p>
+
+<h2>Webhook Events</h2>
+<ul>
+    <li>{ "ReferenceId":"9d967a61-6fc5-4bac-8106-79270b5441cf", "AgentId":1, "EventType":"reference/created" }</li>
+    <li>{ "ApplicantId":"a467cb55-5d53-4d23-b133-8ef774404858", "AgentId":1, "EventType":"applicant/created" }</li>
+    <li>{ "ApplicantId":"1178b0c7-d718-4719-91d7-b16192e72670", "AgentId":1, "EventType":"applicant/gtor/created" }</li>
+</ul>
+
 <h2>Product Types</h2>
 <ul>
     <li>Full Tenant Reference = 1</li>
@@ -102,4 +117,3 @@
     <li>Hon = 13</li>
     <li>Major = 14</li>        
 </ul>
-
