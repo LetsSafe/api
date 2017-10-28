@@ -59,15 +59,30 @@
 
 <h2>Webhook Events</h2>
 <ul>  
-    <li>Reference Creation</li>
-    <li>{ "Payload":"reference id GUID", "AgentId":1, "EventType":"reference/created" }</li>
+    <li>Referencing Events</li>
+    <li>applicant/created, when a new reference is created</li>
+    <li>applicant/gtor/created, when a guarantor is added to a reference</li>
+    <li>applicant/deleted, when an applicant is delete from a reference</li>
+    <li>applicant/details/completed, when an applicant completes their initial applicantion</li>
+    <li>applicant/completed, when an applicants reference completes</li>
+    <li>applicant/employer/completed, when the employer completes the reference</li>
+    <li>applicant/futureemployer/completed, when the future employer completes the reference</li>
+    <li>applicant/landlord/completed, when the landlord completes the reference</li>
+    <li>applicant/previouslandlord/completed, when the previous landlord completes the reference</li>
+    <li>Payments</li>
+    <li>payment/created, when a payment is made on your account</li>
+</ul>
+<ul>  
+    <li>Referencing Event Payload</li>
     <li>{ "Payload":"applicant id GUID", "AgentId":1, "EventType":"applicant/created" }</li>
     <li>{ "Payload":"applicant id GUID", "AgentId":1, "EventType":"applicant/gtor/created" }</li>
-    <li>References</li>
-    <li>{ "Payload":"applicant id GUID", "AgentId":1, "EventType":"reference/currentemployer/completed"}</li>
-    <li>{ "Payload":"applicant id GUID", "AgentId":1, "EventType":"reference/futureemployer/completed"}</li>
-    <li>{ "Payload":"applicant id GUID", "AgentId":1, "EventType":"reference/currentLandlord/completed"}</li>
-    <li>{ "Payload":"applicant id GUID", "AgentId":1, "EventType":"reference/previouslandlord/completed"}</li>
+    <li>{ "Payload":"applicant id GUID", "AgentId":1, "EventType":"applicant/deleted"}</li>
+    <li>{ "Payload":"applicant id GUID"," AgentId":1, "EventType":"applicant/details/completed"}</li>
+    <li>{ "Payload":"applicant id GUID"," AgentId":1, "EventType":"applicant/completed"}</li>
+    <li>{ "Payload":"applicant id GUID", "AgentId":1, "EventType":"applicant/employer/completed"}</li>
+    <li>{ "Payload":"applicant id GUID", "AgentId":1, "EventType":"applicant/futureemployer/completed"}</li>
+    <li>{ "Payload":"applicant id GUID", "AgentId":1, "EventType":"applicant/landlord/completed"}</li>
+    <li>{ "Payload":"applicant id GUID", "AgentId":1, "EventType":"applicant/previouslandlord/completed"}</li>
     <li>Payments</li>
     <li>{ "Payload":"", "AgentId":1, "EventType":"payment/created" }</li>
 </ul>
