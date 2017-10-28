@@ -24,7 +24,7 @@
         <a href="https://github.com/LetsSafe/api/blob/master/get_inprogress.php">Get inprogress tenant references</a>
     </li>
     <li>
-        <a href="https://github.com/LetsSafe/api/blob/master/get_completed.php">Get complate tenant references</a>
+        <a href="https://github.com/LetsSafe/api/blob/master/get_completed.php">Get completed tenant references</a>
     </li>
     <li>
         <a href="https://github.com/LetsSafe/api/blob/master/delete_applicant.php">Delete an applicant</a>
@@ -62,8 +62,8 @@
     <li>applicant/created, when a new reference is created</li>
     <li>applicant/gtor/created, when a guarantor is added to a reference</li>
     <li>applicant/deleted, when an applicant is delete from a reference</li>
-    <li>applicant/details/completed, when an applicant completes their initial applicantion</li>
-    <li>applicant/completed, when an applicants reference completes</li>
+    <li>applicant/details/completed, when an applicant completes their initial application</li>
+    <li>applicant/completed, when an applicant's reference completes</li>
     <li>applicant/employer/completed, when the employer completes the reference</li>
     <li>applicant/futureemployer/completed, when the future employer completes the reference</li>
     <li>applicant/landlord/completed, when the landlord completes the reference</li>
