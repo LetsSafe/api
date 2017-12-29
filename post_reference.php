@@ -15,7 +15,7 @@ curl_setopt_array($curl, array(
   CURLOPT_CUSTOMREQUEST => "POST",
   CURLOPT_POSTFIELDS => $payload,
   CURLOPT_HTTPHEADER => array(
-    "apikey: " + $apiKey,
+    "apikey: " . $apiKey,
     "cache-control: no-cache",
     "content-type: application/json"
   ),

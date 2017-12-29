@@ -13,7 +13,7 @@ curl_setopt_array($curl, array(
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "GET",
   CURLOPT_HTTPHEADER => array(
-    "apikey: " + $apiKey,
+    "apikey: " . $apiKey,
     "cache-control: no-cache"
   ),
 ));
@@ -28,5 +28,3 @@ if ($err) {
 } else {
   echo $response;
 }
-
-?>

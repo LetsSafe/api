@@ -7,7 +7,7 @@ $payload = "{ \"ApplicantFirstName\": \"GTOR JULIA\", \"ApplicantLastName\": \"A
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://portal.letssafe.com/api/v2/applicants/" + $applicantId + "/gtors/add",
+  CURLOPT_URL => "https://portal.letssafe.com/api/v2/applicants/" . $applicantId . "/gtors/add",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -16,7 +16,7 @@ curl_setopt_array($curl, array(
   CURLOPT_CUSTOMREQUEST => "POST",
   CURLOPT_POSTFIELDS => $payload,
   CURLOPT_HTTPHEADER => array(
-    "apikey: " + $apiKey,
+    "apikey: " . $apiKey,
     "cache-control: no-cache",
     "content-type: application/json"
   ),
@@ -32,5 +32,3 @@ if ($err) {
 } else {
   echo $response;
 }
-
-?>
