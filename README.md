@@ -32,6 +32,20 @@
     </li>
 </ul>
 
+<h2>Billing Api Examples</h2>
+
+<ul>    
+    <li>
+        <a href="https://github.com/LetsSafe/api/blob/master/get_billing_orders.php">Get all orders</a>
+    </li>
+    <li>
+        <a href="https://github.com/LetsSafe/api/blob/master/get_billing_order.php">Get an order</a>
+    </li>
+    <li>
+        <a href="https://github.com/LetsSafe/api/blob/master/get_billing_order_pdf.php">Get an orders pdf</a>
+    </li>
+</ul>
+
 <h2>Test API Mocked Urls</h2>
 <p>
     https://portal.letssafe.com/testapi/v2/applicants/3fdc5a6f-09b8-459e-9b1d-129e761a485c<br />
