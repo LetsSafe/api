@@ -118,6 +118,18 @@
     <li>Warning = 6</li>
 </ul>
 
+<ul>
+    <li>GradeCcId: Credit Check</li>
+    <li>GradePorId: Proof of Residence Grade</li>
+    <li>GradeEmpId: Employer Reference Grade</li>
+    <li>GradeFtrEmpId: Future Employer Reference Grade</li>
+    <li>GradeLlId: Landlord Reference Grade</li>
+    <li>GradePrvLlId: Previous Landlord Reference Grade</li>
+    <li>GradeAcctId: Accountant Reference Grade</li>
+    <li>GradeGtorId: Guarantor Reference Grade</li>
+    <li>GradeIrrId: Income to Rent Ratio Grade</li>
+</ul>
+
 <h2>Employment Types</h2>
 <ul>
     <li>Employed = 1</li>
