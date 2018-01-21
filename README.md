@@ -4,6 +4,8 @@
 <p>Or npm install lets-safe-api</p>
 
 <p>To use the test API replace api/v2 with testapi/v2, the test API will return mocked data.<p>
+    
+<p><a href="https://portal.letssafe.com/swagger">View our Swagger documents here</a></p>
 
 <ul>
     <li>
