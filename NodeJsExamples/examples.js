@@ -46,7 +46,7 @@ const tenancyDetails = {
 letsSafeApi.submit(tenancyDetails).then((res) =>{
     console.log("Submit Response")
     console.log(res.body)
-    letsSafeApi.references("$filter=ReferenceId eq " + res.body.id + "").then((res) =>{
+    letsSafeApi.references(`filter=ReferenceId eq ${res.body.id}`).then((res) =>{
         console.log("Get Applicants by Ref Id Response:")
         res.body.forEach(function(element) {            
             letsSafeApi.applicant(element.ApplicantId).then((applicantRes) =>{
