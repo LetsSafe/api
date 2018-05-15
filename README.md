@@ -59,7 +59,7 @@
 
 <h2>OData filtering examples</h2>
 <ul>
-    <li>/testapi/v2/applicants/completed?$filter=contains(ApplicantFirstName, 'Test')&$top=5</li>
+    <li>/testapi/v2/applicants/completed?$filter=substringof(ApplicantFirstName, 'Test')&$top=5</li>
     <li>/testapi/v2/applicants?$orderby=CreatedOn desc&$select=CreatedOn,ApplicantFirstName&$top=5</li>
     <li>/testapi/v2/applicants/completed?$filter=date(CreatedOn) gt 2017-09-11 and date(CreatedOn) lt 2017-11-11&$top=2</li>
     <li>/testapi/v2/applicants/completed?$filter=year(CreatedOn) gt 2016 and month(CreatedOn) lt 11&$top=2`</li>
