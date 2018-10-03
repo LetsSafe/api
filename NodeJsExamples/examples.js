@@ -1,6 +1,7 @@
 var letsSafeApi = require("lets-safe-api")
 
-letsSafeApi.init('api key here', false)
+/* For the testing use the new sandbox site and set test api to false */
+letsSafeApi.init('api key here', false, 'https://sandbox.letssafe.com/')
 
 /* Get the number of credits available 
 
