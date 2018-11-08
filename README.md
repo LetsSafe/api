@@ -48,24 +48,6 @@
     </li>
 </ul>
 
-<h2>Test API Mocked Urls</h2>
-<p>
-    https://portal.letssafe.com/testapi/v2/applicants/3fdc5a6f-09b8-459e-9b1d-129e761a485c<br />
-    https://portal.letssafe.com/testapi/v2/credits<br />
-    https://portal.letssafe.com/testapi/v2/references<br />
-    https://portal.letssafe.com/testapi/v2/applicants/completed<br />
-    https://portal.letssafe.com/testapi/v2/applicants/inprogress<br />
-</p>
-
-<h2>OData filtering examples</h2>
-<ul>
-    <li>/testapi/v2/applicants/completed?$filter=substringof(ApplicantFirstName, 'Test')&$top=5</li>
-    <li>/testapi/v2/applicants?$orderby=CreatedOn desc&$select=CreatedOn,ApplicantFirstName&$top=5</li>
-    <li>/testapi/v2/applicants/completed?$filter=date(CreatedOn) gt 2017-09-11 and date(CreatedOn) lt 2017-11-11&$top=2</li>
-    <li>/testapi/v2/applicants/completed?$filter=year(CreatedOn) gt 2016 and month(CreatedOn) lt 11&$top=2`</li>
-    <li>/testapi/v2/references?$filter=ReferenceId eq guid'9937dec9-ff6c-47c8-a55b-3f1c21633f85'</li>
-</ul>
-
 <h2>How to setup Webhooks</h2>
 <p>
     To enable webhooks:
