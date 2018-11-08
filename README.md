@@ -3,7 +3,7 @@
 <p>All calls can be made using PHP, see our examples below.</p>
 <p>Or npm install lets-safe-api</p>
 
-<p>To use the test API replace api/v2 with testapi/v2, the test API will return mocked data.<p>
+<p>To test the API use the sandbox site. https://sandbox.letssafe.com/ and go to https://sandbox.letssafe.com/swagger/ui/index to see all the api calls available.<p>
     
 <p><a href="https://portal.letssafe.com/swagger">View our Swagger documents here</a></p>
 
