@@ -150,3 +150,11 @@
     <li>Hon = 13</li>
     <li>Major = 14</li>        
 </ul>
+
+<h2>Question Grade Type</h2>
+<ul>
+    <li>Pass = 1</li>
+    <li>Failed = 2</li>
+    <li>Warning = 3</li>
+    <li>AwaitingGrading = 4</li>
+</ul>
